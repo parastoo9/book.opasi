@@ -1,0 +1,33 @@
+body{
+    direction:rtl;
+
+}
+#header{
+    background-color: pink;
+    width:100%;
+    min-height:200px;
+
+}
+#sidebar{
+    background-color: aquamarine;
+    width:25%;
+    min-height:400px;
+
+}
+#main-content{
+    background-color: orange;
+    width:75%;
+    min-height:400px;
+}
+.sidebar{
+    display: inline-block;
+    float:right;
+}
+#footer{
+    background-color: blueviolet;
+    min-height: 150px;
+    width:100%;
+}
+.clear{
+    clear:both;
+}

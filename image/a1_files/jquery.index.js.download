@@ -1,0 +1,153 @@
+jQuery(document).ready(function($) {
+     $('.welearn-comments-counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+    $("#maso-forgetpass").on("submit", function(e) {
+        $form = $(this);
+        $.ajax({
+            type: 'POST',
+            url: $form.find(".admin-ajax-url").val(),
+            data: {
+                action: "maso_reset_pass",
+                email: $("#forget-email-input").val(),
+                nonce: $("#maso_reset_pass_nonce").val(),
+            },
+            dataType: 'json',
+            beforeSend: function() {
+                $form.find("button").text("صبر کنید...");
+            },
+            success: function(data) {
+                $form.find("button").text("تلاش مجدد!");
+                var message = '';
+                var color = '';
+                if (data.result === true) {
+                    message = data.msg;
+                    color = '#27ae60';
+                } else {
+                    color = '#e74c3c';
+                    if (data.msg) message = data.msg;
+                    else message = "اشکالی در ارسال به وجود آمده است.";
+                }
+                $form.find(".fgt-message").text(message).css('color', color);
+            }
+        });
+        return false;
+    });
+    $(".welearn-latest-scroll").mCustomScrollbar({
+        scrollButtons: {
+            enable: !0
+        },
+        theme: "dark-2"
+    });
+    $('[data-toggle="tooltip"]').tooltip();
+    $(".woocommerce-ordering").on("change", "select.orderby", function() {
+        $(this).closest("form").submit()
+    }), $("input.qty:not(.product-quantity input.qty)").each(function() {
+        var b = parseFloat($(this).attr("min"));
+        b >= 0 && parseFloat($(this).val()) < b && $(this).val(b)
+    })
+    $("#see_path").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".path_scroll").offset().top
+        }, 1000);
+    });
+    try {
+        jQuery('video').mediaelementplayer({
+            // if the <video width> is not specified, this is the default
+            /*defaultVideoWidth: parseInt(($(window).width() -100),10),*/
+            // if the <video height> is not specified, this is the default
+            /*defaultVideoHeight: parseInt(($(window).height() -100),10),*/
+            // if set, overrides <video width>
+            videoWidth: -1,
+            // if set, overrides <video height>
+            videoHeight: -1,
+            // width of audio player
+            audioWidth: 400,
+            // height of audio player
+            audioHeight: 30,
+            // initial volume when the player starts
+            startVolume: 1.0,
+            // useful for <audio> player loops
+            loop: false,
+            // enables Flash and Silverlight to resize to content size
+            enableAutosize: true,
+            // the order of controls you want on the control bar (and other plugins below)
+            features: ['playpause', 'progress', 'current', 'duration', 'tracks', 'volume', 'fullscreen'],
+            // Hide controls when playing and mouse is not over the video
+            alwaysShowControls: true,
+            // force iPad's native controls
+            iPadUseNativeControls: false,
+            // force iPhone's native controls
+            iPhoneUseNativeControls: false,
+            // force Android's native controls
+            AndroidUseNativeControls: false,
+            // forces the hour marker (##:00:00)
+            alwaysShowHours: false,
+            // show framecount in timecode (##:00:00:00)
+            showTimecodeFrameCount: false,
+            // used when showTimecodeFrameCount is set to true
+            framesPerSecond: 25,
+            // turns keyboard support on and off for this instance
+            enableKeyboard: true,
+            // when this player starts, it will pause other players
+            pauseOtherPlayers: true,
+            // array of keyboard commands
+            keyActions: []
+        });
+    } catch (e) {}
+});
+jQuery(document).ready(function($) {
+    if ($(".owl-carousel").length > 0) {
+        $(".owl-carousel").owlCarousel({
+            items: '7',
+            rtl: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 7
+                }
+            }
+        });
+        if ($(".owl-item > .current_step").length > 0) {
+            var owlCurrentIndex = $(".owl-item > .current_step").closest('.owl-item').index();
+            console.log(owlCurrentIndex);
+            $('.owl-carousel').trigger('to.owl.carousel', [owlCurrentIndex - 3, owlCurrentIndex + 3, true]);
+        }
+    }
+    //$( ".course_lessons_nav" ).after("<a href='#course_lessons_nav' class='course_lessons_nav_fixed'>بازگشت به فهرست مطالب</a>");
+    if($('.price-button').length)
+	{
+		var stickySidebar = $('.price-button').offset().top;
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > stickySidebar) {
+				$('.price-button').addClass('fixed-price');
+			} else {
+				$('.price-button').removeClass('fixed-price');
+			}
+		});
+	}
+	
+});
+jQuery(document).ready(function($) {
+    $(".packman").owlCarousel({
+        items: '7',
+        rtl: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 7
+            }
+        }
+    });
+});

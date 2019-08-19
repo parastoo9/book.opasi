@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/flaticon.eot");
+  src: url("../fonts/flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/flaticon.woff") format("woff"), url("../fonts/flaticon.ttf") format("truetype"), url("../fonts/flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/flaticon.svg#Flaticon") format("svg");
+  }
+}
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 25px;
+  font-style: normal;
+}
+.flaticon-001-user:before {
+	content: "\e001";
+}
+.flaticon-002-user-1:before {
+	content: "\e002";
+}
+.flaticon-003-menu:before {
+	content: "\e003";
+}
+.flaticon-004-menu-1:before {
+	content: "\e004";
+}
+.flaticon-005-clock-circular-outline:before {
+	content: "\e005";
+}
+.flaticon-006-clock:before {
+	content: "\e006";
+}
+.flaticon-007-multiple-users-silhouette:before {
+	content: "\e007";
+}
+.flaticon-008-inbox:before {
+	content: "\e008";
+}
+.flaticon-009-target-of-audience:before {
+	content: "\e009";
+}
+.flaticon-010-audience:before {
+	content: "\e00a";
+}
+.flaticon-012-edit:before {
+	content: "\e00b";
+}
+.flaticon-013-layers:before {
+	content: "\e00c";
+}
+.flaticon-014-edit-1:before {
+	content: "\e00d";
+}
+.flaticon-015-search:before {
+	content: "\e00e";
+}
+.flaticon-016-search-1:before {
+	content: "\e00f";
+}
+.flaticon-017-search-2:before {
+	content: "\e010";
+}
+.flaticon-018-wordpress-logo:before {
+	content: "\e011";
+}
+.flaticon-019-html-5-logo:before {
+	content: "\e012";
+}
+.flaticon-020-php-programming-language:before {
+	content: "\e013";
+}
+.flaticon-021-speech-bubbles-comment-option:before {
+	content: "\e014";
+}
+.flaticon-022-comments:before {
+	content: "\e015";
+}
+.flaticon-023-cloud-computing:before {
+	content: "\e016";
+}
+.flaticon-024-locked-padlock:before {
+	content: "\e017";
+}
+.flaticon-025-download-button:before {
+	content: "\e018";
+}
+.flaticon-026-college-graduation:before {
+	content: "\e019";
+}
+.flaticon-027-students-cap:before {
+	content: "\e01a";
+}
+.flaticon-028-add:before {
+	content: "\e01b";
+}
+.flaticon-029-plus:before {
+	content: "\e01c";
+}
+.flaticon-030-plus-black-symbol:before {
+	content: "\e01d";
+}
+.flaticon-031-css-3-logo:before {
+	content: "\e01e";
+}
+.flaticon-032-css-3:before {
+	content: "\e01f";
+}
+.flaticon-033-code:before {
+	content: "\e020";
+}
+.flaticon-034-js:before {
+	content: "\e021";
+}
+.flaticon-035-js-file:before {
+	content: "\e022";
+}
+.flaticon-036-favorite-heart-button:before {
+	content: "\e023";
+}
+.flaticon-037-heart:before {
+	content: "\e024";
+}
+.flaticon-038-telegram:before {
+	content: "\e025";
+}
+.flaticon-040-telegram-2:before {
+	content: "\e026";
+}
+.flaticon-041-online-course:before {
+	content: "\e027";
+}
+.flaticon-042-online-education:before {
+	content: "\e028";
+}
+.flaticon-043-list:before {
+	content: "\e029";
+}
+.flaticon-044-android-logo:before {
+	content: "\e02a";
+}
+.flaticon-045-danger:before {
+	content: "\e02b";
+}
+.flaticon-047-danger-1:before {
+	content: "\e02c";
+}

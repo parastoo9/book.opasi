@@ -1,0 +1,20 @@
+#wpcomm .wpdiscuz-textarea-wrap .wpdiscuz-textarea-foot{ text-align:left; }
+#wpcomm .wmu-tabs { text-align:right; }
+#wpcomm .wmu-tabs .wmu-preview-remove .wmu-delete{ right:0px; }
+
+#wpcomm .wmu-video-tab .wmu-preview-remove img{ float:right; margin:0px 0px 0px 5px; }
+#wpcomm .wmu-video-tab .wmu-preview-remove .wmu-file-name{ clear:right; margin-left:20px; margin-right: 5px; }
+#wpcomm .wmu-video-tab .wmu-preview-remove .wmu-delete{ background-position:left; }
+
+#wpcomm .wmu-file-tab .wmu-preview-remove img{ float:right; margin:0px 0px 0px 5px; }
+#wpcomm .wmu-file-tab .wmu-preview-remove .wmu-file-name{ clear:right; margin-left:20px; margin-right: 5px; }
+#wpcomm .wmu-file-tab .wmu-preview-remove .wmu-delete{ background-position:left; }
+
+#wpcomm .wmu-single-file.wmu-tabs .wmu-show{ margin:0px 2px 5px 1px; }
+#wpcomm .wmu-single-file.wmu-tabs .wmu-preview-remove img{ float:right; margin:0px 0px 0px 5px; }
+#wpcomm .wmu-single-file.wmu-tabs .wmu-preview-remove .wmu-file-name{ clear:right; margin-left:15px; margin-right: 5px; }
+#wpcomm .wmu-action-wrap{ text-align:right; }
+#wpcomm .wmu-top-title{ padding:5px 3px 5px 20px; text-align:right; }
+
+
+

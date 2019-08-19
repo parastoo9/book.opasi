@@ -1,0 +1,597 @@
+@charset "utf-8";
+/*
+@font-face {
+	font-family: 'welearn';
+	src: url(fonts/IRANSans-web.eot?#iefix) format("eot"), url(fonts/IRANSans-web.woff) format("woff"), url(fonts/IRANSans-web.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal
+}
+*/
+
+@font-face {
+	font-family: 'welearn';
+	src: url('fonts/iranyekan-regular.woff');
+}
+@font-face {
+	font-family: 'welearn-bold';
+	src: url('fonts/iranyekan-bold.woff');
+}
+/*-------------------------------------------------------------
+ 1 - Global Section CSS
+--------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+ 2 - Header Section CSS
+--------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+ 3 - Intro Section CSS
+--------------------------------------------------------------*/
+
+.welearn-intro-section {
+	padding: 80px 0 20px;
+	color: #fff;
+	text-align: center
+}
+.welearn-intro-section ul {
+	display: table;
+	margin: 0 auto
+}
+.welearn-intro-section ul li {
+	float: right
+}
+.welearn-intro-section ul li a {
+	margin: 0 5px;
+	padding: 5px 20px;
+	font-size: 15px;
+	color: #333
+}
+.welearn-intro-section h1 {
+	font-size: 40px;
+	color: #fff;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+	text-align: center
+}
+.welearn-intro-section p {
+	padding: 25px 100px;
+	font-size: 20px;
+	text-align: center
+}
+/*-------------------------------------------------------------
+ 4 - Logo Section CSS
+--------------------------------------------------------------*/
+
+.welearn-logo-section {
+	width: 80%;
+	margin: 0 auto;
+}
+.welearn-logo-section .welearn-logo-item {
+	width: 12.5%;
+	float: right;
+	padding: 0 15px;
+}
+.welearn-logo-section .welearn-logo-item a {
+	display: block
+}
+.welearn-intro-logo .welearn-logo-item a:hover {
+	margin: -10px 0 0
+}
+.welearn-logo-section .tooltip.in {
+	opacity: 1
+}
+.welearn-logo-section .tooltip-inner {
+	max-width: 210px;
+	min-width: 210px;
+	background: rgba(0, 0, 0, .2);
+	color: #fdc800;
+	font-size: 15px;
+	border-radius: 300px
+}
+.welearn-logo-section .tooltip.top .tooltip-arrow {
+	border-top-color: rgba(0, 0, 0, .2)
+}
+/*-------------------------------------------------------------
+ 5 - Counter Section CSS
+--------------------------------------------------------------*/
+
+.welearn-counter-section {
+	width: 100%;
+	margin: 100px 0 0;
+	padding: 0;
+	text-align: center;
+	background: rgba(0, 0, 0, .2);
+}
+.welearn-counter-section:after {
+	content: '';
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	right: 0 left: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #f9f9f9;
+}
+.welearn-counter-section ul li .welearn-counter-item {
+	padding: 10px 0;
+	font-family: 'welearn-bold';
+	text-align: center
+}
+.welearn-counter-section ul li:first-child .welearn-counter-item {
+	border-left: 0
+}
+.welearn-counter-section .welearn-counter-icon i {
+	position: relative;
+	top: 10px;
+	color: #CDD2D7;
+}
+.welearn-counter-section .welearn-counter-icon i:before{
+	font-size: 45px;
+}
+.welearn-counter-section .welearn-counter-name {
+	display: block;
+	padding: 20px 0 0;
+	font-size: 15px;
+	color: #fff;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15)
+}
+.welearn-counter-section .welearn-counter-number {
+	padding: 10px 0;
+	font-size: 30px;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15)
+}
+/*-------------------------------------------------------------
+ 6 - Course Section CSS
+--------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+ 7 - Wordpress Section CSS
+--------------------------------------------------------------*/
+
+.welearn-wordpress-section {
+	width: 100%;
+	float: right;
+	margin: 0 0 20px;
+	padding: 25px 10px 0;
+	position: relative;
+}
+.welearn-wordpress-carousel{
+	margin: -75px 0 0;
+	padding: 100px 0 30px
+}
+.welearn-wordpress-section .welearn-wordpress-title {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.welearn-wordpress-section a {
+	display: block;
+}
+.welearn-wordpress-section img {
+	width: 100%;
+	height: 100%;
+	float: right;
+	margin: 0 0 10px;
+}
+.welearn-wordpress-section .welearn-wordpress-number {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	bottom: -20px;
+	right: 0;
+	left: 0;
+	font-size: 15px;
+	background: #f7f2f2;
+	color: #555;
+	text-align: center;
+}
+/*-------------------------------------------------------------
+ 8 - Latest Section CSS
+--------------------------------------------------------------*/
+
+.welearn-background-section {
+	padding: 70px 0;
+	position: relative;
+	background: #fff
+}
+.welearn-latest-section {
+	width: 100%;
+	float: right;
+	padding: 20px;
+	background: #f6f9fa;
+	border-radius: 2px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+.welearn-latest-section .welearn-latest-title {
+	margin: 15px 0 30px;
+	position: relative;
+}
+.welearn-latest-section .welearn-latest-scroll {
+	height: 575px;
+}
+.welearn-latest-section .welearn-latest-thumbnail {
+	width: 60px;
+	height: 65px;
+	float: right;
+	padding: 0 0 0 15px;
+	position: relative;
+	z-index: 100;
+}
+.welearn-latest-section .welearn-latest-thumbnail a {
+	display: block;
+}
+.welearn-latest-section .welearn-latest-thumbnail img {
+	border-radius: 2px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.welearn-latest-section .welearn-latest-content {
+	width: 100%;
+	position: relative;
+}
+.welearn-latest-section .welearn-latest-content h3 {
+	width: 80%;
+	margin: 0 0 2px;
+	font-size: 12px;
+	line-height: 25px;
+}
+.welearn-latest-section .welearn-latest-content .welearn-latest-meta {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	font-size: 11px;
+}
+.welearn-latest-section .welearn-latest-content .welearn-latest-meta ul li {
+	float: right;
+	padding: 3px 7px;
+	background: #849399;
+	color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease
+}
+.welearn-latest-section .welearn-latest-content:hover .welearn-latest-meta ul li {
+	background: #fdc800;
+	color: #111
+}
+.welearn-latest-section .welearn-latest-content .welearn-latest-meta ul li a {
+	border-radius: 20px;
+	color: #fff;
+	background: #849399;
+	padding: 3px 7px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+/*-------------------------------------------------------------
+ 9 - Students Section CSS
+--------------------------------------------------------------*/
+
+.welearn-students-section .welearn-students-title {
+	margin: 0 0 30px;
+	position: relative;
+}
+.welearn-students-section .welearn-students-title h3 {
+	display: inline-flex;
+	margin: 5px 0 0;
+}
+.welearn-students-section .welearn-students-button {
+	float: left;
+	margin: 5px 0 0 15px
+}
+.welearn-students-section .welearn-students-button a {
+	padding: 7px 15px;
+	font-family: 'welearn-bold', 'Myriad Pro', Tahoma;
+	background: #fdc800;
+	color: #333;
+	border-radius: 300px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+.welearn-students-section .welearn-students-button a:hover {
+	opacity: .9
+}
+.welearn-students-section .welearn-students-item {
+	width: 100%;
+	float: right;
+	position: relative;
+	margin-bottom: 20px
+}
+.welearn-students-section .welearn-students-content {
+	margin: 0 0 20px;
+	padding: 20px 20px 30px 55px;
+	position: relative;
+	font-size: 12px;
+	line-height: 25px;
+	background: #f6f9fa;
+	color: #666;
+	text-align: justify;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+.welearn-students-section .welearn-students-content:before {
+	content: '\f10d';
+	font: normal normal normal 20px/1 FontAwesome;
+	left: 25px;
+	position: absolute;
+	top: 20px;
+	color: #fdc800
+}
+.welearn-students-section .welearn-students-content .welearn-students-quote {
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: -15px;
+	left: 50px;
+	border-right: 15px solid transparent;
+}
+.welearn-students-section .welearn-students-avatar {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 0 10px 0 0;
+	overflow: hidden;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.welearn-students-section .welearn-students-avatar img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+.welearn-students-section .welearn-students-name {
+	float: left;
+	font-size: 11px;
+}
+.welearn-students-section .welearn-students-name span {
+	display: block;
+	padding: 5px 0;
+}
+/*-------------------------------------------------------------
+ 10 - Vision Section CSS
+--------------------------------------------------------------*/
+
+.welearn-vision-section {
+	width: 100%;
+	float: right;
+	padding: 30px 0;
+	position: relative;
+	background: #454f53;
+	color: #e5e5e5;
+	border-bottom: 1px solid #4a5459;
+}
+.welearn-vision-section .col-md-3,
+.welearn-vision-section .col-md-9 {
+	float: left;
+}
+.welearn-vision-section .welearn-vision-percent {
+	margin: 60px 0 0;
+	position: relative;
+}
+.welearn-vision-section .welearn-vision-percent i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 200px;
+	color: #fdc800;
+	font-family: 'welearn-bold';
+	font-style: normal;
+	line-height: 160px;
+}
+.welearn-vision-section .welearn-vision-percent h4 {
+	padding: 0 0 0 100px;
+	text-align: center;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15)
+}
+.welearn-vision-section .welearn-vision-percent span {
+	display: block;
+}
+.welearn-vision-section .welearn-vision-percent .welearn-vision-number {
+	margin: 0 0 -15px;
+	font-size: 80px;
+	color: #fecf1e
+}
+.welearn-vision-section .welearn-vision-percent .welearn-vision-space {
+	line-height: 35px;
+}
+.welearn-vision-section .welearn-vision-percent em {
+	color: #fdc800;
+	font-style: normal;
+}
+.welearn-vision-section .welearn-vision-icon {
+	position: absolute;
+	top: -45px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	color: #3b4448
+}
+.welearn-vision-section .welearn-vision-icon:before{
+	font-size: 200px;
+}
+.welearn-vision-section .welearn-vision-content {
+	padding: 0 0 0 40px;
+	position: relative;
+	line-height: 30px;
+	z-index: 1000
+}
+.welearn-vision-section .welearn-vision-content p {
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15)
+}
+.welearn-vision-section .welearn-vision-content em {
+	color: #fdc800;
+	font-style: normal;
+}
+/*-------------------------------------------------------------
+ 11 - Footer Section CSS
+--------------------------------------------------------------*/
+
+.welearn-footer-section {
+	padding: 45px 0 0;
+	background: #454f53
+}
+.welearn-footer-section .welearn-footer-main .col-md-3,
+.welearn-footer-section .welearn-footer-main .col-md-6 {
+	float: left;
+}
+.welearn-footer-section .welearn-footer-widget h4 {
+	margin: 0 0 15px;
+	padding: 0;
+	font-size: 16px;
+	color: #fdc800;
+	border: 0;
+	background: transparent;
+	border-color: transparent
+}
+.welearn-footer-section .welearn-footer-widget .welearn-widget-category li {
+	padding: 5px 0;
+	border-top: 1px solid #404a4e
+}
+.welearn-footer-section .welearn-footer-widget .welearn-widget-category li:first-child {
+	border-top: 0
+}
+.welearn-footer-section .welearn-footer-widget .welearn-widget-category li a {
+	display: block;
+	font-size: 14px;
+	color: #e5e5e5;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15)
+}
+.welearn-footer-section .welearn-footer-widget .welearn-widget-category li a:hover {
+	padding-right: 30px;
+	color: #fdc800
+}
+.welearn-footer-section .welearn-footer-widget .welearn-widget-post li {
+	float: right;
+	width: 25%;
+	padding: 5px
+}
+.welearn-footer-section .welearn-footer-widget .welearn-widget-post li img {
+	height: 55px;
+	margin-bottom: 0;
+	border-radius: 3px;
+	object-fit: cover;
+	-webkit-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05)
+}
+.welearn-footer-section .welearn-footer-bottom {
+	margin: 30px 0 0;
+	padding: 20px 0 17px;
+	position: relative;
+	font-size: 14px;
+	background: #3b4448;
+	color: #e5e5e5;
+	border-top: 1px solid #4a5459;
+}
+.welearn-footer-section .welearn-footer-bottom .welearn-footer-copyright {
+	text-align: left;
+}
+.welearn-footer-section .welearn-footer-bottom .col-md-4,
+.welearn-footer-section .welearn-footer-bottom .col-md-8 {
+	float: left;
+}
+.welearn-footer-section .welearn-footer-bottom ul {
+	float: right
+}
+.welearn-footer-section .welearn-footer-bottom ul li {
+	float: right
+}
+.welearn-footer-section .welearn-footer-bottom ul li a {
+	color: #e5e5e5;
+	padding: 5px 10px;
+	border-radius: 2px
+}
+.welearn-footer-section .welearn-footer-bottom ul li.active a {
+	background: #323a3d;
+	-webkit-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.05)
+}
+.welearn-footer-section .welearn-footer-bottom ul li a:hover {
+	color: #fdc800
+}
+/*-------------------------------------------------------------
+ 12 - Telegram Section CSS
+--------------------------------------------------------------*/
+
+.welearn-telegram-section {
+	padding: 15px 25px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-size: 15px;
+	background: #08c;
+	color: #fff;
+	font-family: 'welearn-bold', 'Myriad Pro', Tahoma;
+	border-top-left-radius: 4px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+	text-align: center;
+	z-index: 1000
+}
+.welearn-telegram-section i{
+	position: relative;
+    left: 7px;
+    top: 2px;
+}
+.welearn-telegram-section:hover{
+	background: #0a93d8;
+	color: #fff;
+}
+
+@media screen and (max-width: 767px){
+	.welearn-intro-section{
+		padding: 30px 0;
+	}
+	.welearn-intro-section h1{
+		line-height: 50px;
+	}
+	.welearn-intro-section p {
+		padding: 30px 0
+	}
+	.welearn-logo-section .welearn-logo-item{
+		width: 50%;
+		height: 100px;
+	}
+	.welearn-footer-section .welearn-footer-widget h4{
+		margin: 15px 0;
+	}
+	.welearn-footer-section .welearn-footer-bottom .welearn-footer-copyright{
+		text-align: center;
+	}
+	.welearn-footer-section .welearn-footer-bottom ul{
+		float: none;
+		display: table;
+		margin: 0 auto;
+		padding: 5px 0 0;
+		text-align: center;
+	}
+	.welearn-footer-section .welearn-footer-bottom ul li{
+		float: none;
+		display: inline-block;
+	}
+}
+#captcha,
+#captcha_register {
+	font-family: 'Arial';
+}
+.wc-comment-text code{
+	float: left;
+	text-align: left;
+	direction: ltr;
+}
+.wc-comment-footer{
+	clear: both;
+}

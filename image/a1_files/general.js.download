@@ -1,0 +1,273 @@
+var themeElements = {
+    siteWrap: ".site-wrap",
+    footerWrap: ".footer-wrap",
+    mainMenu: ".header-navigation",
+    selectMenu: ".select-menu",
+    ratingForm: ".rating-form",
+    themexSlider: ".themex-slider",
+    parallaxSliderClass: "parallax-slider",
+    toolTip: ".tooltip",
+    toolTipWrap: ".tooltip-wrap",
+    tooltipSwitch: ".switch-button",
+    button: ".button",
+    submitButton: ".submit-button",
+    printButton: ".print-button",
+    facebookButton: ".facebook-button",
+    toggleTitle: ".toggle-title",
+    toggleContent: ".toggle-content",
+    toggleElement: ".toggle-element",
+    toggleContainer: ".toggle-container",
+    accordionContainer: ".accordion",
+    tabsContainer: ".tabs-container",
+    tabsTitles: ".tabs",
+    tabsPane: ".pane",
+    playerContainer: ".jp-container",
+    playerSource: ".jp-source a",
+    player: ".jp-jplayer",
+    playerFullscreen: ".jp-screen-option",
+    placeholderFields: ".popup-form input",
+    userImageUploader: ".user-image-uploader",
+    popupContainer: ".popup-container",
+    googleMap: ".google-map-container",
+    woocommercePrice: ".product-price",
+    woocommerceTotal: "tr.order-total",
+    widgetTitle: ".widget-title",
+    ajaxForm: ".ajax-form"
+};
+jQuery(document).ready(function(e) {
+    e(themeElements.mainMenu).find("li").hoverIntent(function() {
+        var t = e(this);
+        t.parent("ul").css("overflow", "visible"), t.children("ul").slideToggle(200, function() {
+            t.addClass("hover")
+        })
+    }, function() {
+        var t = e(this);
+        t.children("ul").slideToggle(200, function() {
+            t.removeClass("hover")
+        })
+    }), e(themeElements.selectMenu).find("select").fadeTo(0, 0), e(themeElements.selectMenu).find("span").text(e(themeElements.selectMenu).find("option:eq(0)").text()), e(themeElements.selectMenu).find("option").each(function() {
+        window.location.href == e(this).val() && (e(themeElements.selectMenu).find("span").text(e(this).text()), e(this).attr("selected", "selected"))
+    }), e(themeElements.selectMenu).find("select").change(function() {
+        window.location.href = e(this).find("option:selected").val(), e(themeElements.selectMenu).find("span").text(e(this).find("option:selected").text())
+    }), e(themeElements.ratingForm).each(function() {
+        var t = e(this).children("div"),
+            n = e(this).children("form");
+        t.raty({
+            score: t.data("score"),
+            readOnly: t.data("readonly"),
+            hints: ["", "", "", "", ""],
+            noRatedMsg: "",
+            click: function(e, t) {
+                n.find(".rating").val(e), n.submit()
+            }
+        })
+    }), e(themeElements.playerContainer).bind("contextmenu", function() {
+        return !1
+    }), e(themeElements.playerContainer).length && (e(themeElements.playerContainer).each(function() {
+        var t = e(this),
+            n = "",
+            i = new Object;
+        t.find(themeElements.playerSource).each(function() {
+            var t = e(this).attr("href"),
+                a = e(this).attr("href").split(".").pop();
+            "webm" == a && (a = "webmv"), "mp4" == a && (a = "m4v"), i[a] = t, n += a, e(this).is(":last-child") || (n += ",")
+        }), t.find(themeElements.player).jPlayer({
+            ready: function() {
+                e(this).jPlayer("setMedia", i)
+            },
+            swfPath: "js/jplayer/Jplayer.swf",
+            supplied: n,
+            cssSelectorAncestor: "#" + t.attr("id"),
+            solution: "html, flash",
+            wmode: "window"
+        }), t.show()
+    }), e(themeElements.playerFullscreen).click(function() {
+        e("body").toggleClass("fullscreen-video")
+    })), e(themeElements.themexSlider).each(function() {
+        var t = {
+            speed: parseInt(e(this).find(".slider-speed").val()),
+            pause: parseInt(e(this).find(".slider-pause").val()),
+            effect: e(this).find(".slider-effect").val()
+        };
+        e(this).themexSlider(t)
+    }), e(themeElements.toolTip).click(function(t) {
+        var n = e(this).children(themeElements.button);
+        if (!n.hasClass("active")) {
+            var i = e(this).find(themeElements.toolTipWrap).eq(0);
+            i.hasClass("active") || (n.addClass("active"), e(themeElements.toolTipWrap).hide(), i.addClass("active").fadeIn(200))
+        }
+        return !1
+    }), e(themeElements.tooltipSwitch).click(function() {
+        for (var t = e(this).parent(); !t.is(themeElements.toolTipWrap);) t = t.parent();
+        return t.fadeOut(200, function() {
+            e(this).next(themeElements.toolTipWrap).addClass("active").fadeIn(200)
+        }), !1
+    }), e("body").click(function() {
+        e(themeElements.toolTipWrap).fadeOut(200, function() {
+            e(this).removeClass("active")
+        }), e(themeElements.toolTipWrap).parent().children(themeElements.button).removeClass("active")
+    }), e("input, textarea").each(function() {
+        e(this).attr("placeholder") && e(this).placeholder()
+    }), e(themeElements.placeholderFields).each(function(t, n) {
+        n = e(n);
+        var i = n.val();
+        n.focus(function() {
+            var t = e(this);
+            t.val() == i && t.val("")
+        }), n.blur(function() {
+            var t = e(this);
+            t.val() || t.val(i)
+        })
+    }), e(themeElements.popupContainer).each(function() {
+        var t = e(this).find(".popup");
+        t.length && e(this).find("a").each(function() {
+            e(this).hasClass("disabled") || e(this).click(function() {
+                return t.stop().hide().fadeIn(300, function() {
+                    window.setTimeout(function() {
+                        t.stop().show().fadeOut(300)
+                    }, 2e3)
+                }), !1
+            })
+        })
+    }), e(themeElements.accordionContainer).each(function() {
+        e(this).find(themeElements.toggleContainer + ".expanded").length || e(this).find(themeElements.toggleContainer).eq(0).addClass("expanded").find(themeElements.toggleContent).show()
+    }), e(themeElements.toggleTitle).live("click", function() {
+        if (e(this).parent().parent().hasClass("accordion") && e(this).parent().parent().find(".expanded").length) {
+            if (e(this).parent().hasClass("expanded")) return !1;
+            e(this).parent().parent().find(".expanded").find(themeElements.toggleContent).slideUp(200, function() {
+                e(this).parent().removeClass("expanded")
+            })
+        }
+        e(this).parent().find(themeElements.toggleContent).slideToggle(200, function() {
+            e(this).parent().toggleClass("expanded")
+        })
+    }), window.location.hash && e(window.location.hash).length && e(window.location.hash).each(function() {
+        var t = e(this);
+        t.parent().hasClass("children") && (t = e(this).parent().parent()), t.addClass("expanded")
+    }), e(themeElements.toggleElement).each(function() {
+        var t = e(this);
+        if (t.data("class")) {
+            var n = e("." + t.data("class"));
+            n.length && (n.find("*").hide(), t.click(function() {
+                n.find("*").slideToggle(200), setTimeout(function() {
+                    t.toggleClass("expanded")
+                }, 200)
+            }))
+        }
+    }), e(themeElements.tabsContainer).each(function() {
+        var t = e(this);
+        if (window.location.hash && t.find(window.location.hash + "-tab").length) {
+            var n = t.find(window.location.hash + "-tab");
+            n.show(), e(window).scrollTop(t.offset().top), t.find(themeElements.tabsTitles).find("li").eq(n.index()).addClass("current")
+        } else t.find(themeElements.tabsPane).eq(0).show().addClass("current"), t.find(themeElements.tabsTitles).find("li").eq(0).addClass("current");
+        t.find(".tabs li").click(function() {
+            return window.location.href = e(this).find("a").attr("href"), t.find(".tabs li").removeClass("current"), e(this).addClass("current"), t.find(".pane").hide(), t.find(".pane:eq(" + e(this).index() + ")").show(), !1
+        })
+    }), e(themeElements.ajaxForm).each(function() {
+        var t = e(this);
+        t.submit(function() {
+			
+            var n = t.find(".message"),
+                i = t.find(".form-loader"),
+                a = t.find(themeElements.submitButton),
+                o = {
+                    action: t.find(".action").val(),
+                    nonce: t.find(".nonce").val(),
+                    data: t.serialize()
+                };
+            a.addClass("disabled").prop("disabled", true);
+			i.show();
+			n.slideUp(300); 
+			e.post(
+			t.attr("action"), o, function(t) {
+				if( e(".redirect", t).length )
+				{
+					if(e(".redirect", t).attr("href"))
+					{
+						window.location.href = e(".redirect", t).attr("href")
+					}
+					else
+					{
+						window.location.reload();
+					}
+				}
+				else
+				{
+					i.hide();
+					a.removeClass("disabled").prop("disabled", false);
+					n.html(t).slideDown(300);
+				}
+                
+            })
+			.fail(function(jqXHR, textStatus) {
+				n.html(jqXHR.status).slideDown(600);
+				if(jqXHR.status&& jqXHR.status=='503')
+				{
+					alert('شما توسط فایروال بلاک شده اید. ساعاتی بعد مراجعه نمایید');
+				}
+				if(jqXHR.status&& jqXHR.status=='403')
+				{
+					alert('عدم دسترسی');
+					window.location.reload();
+				}
+				
+				
+		  }).always(function() {
+				a.removeClass("disabled").prop("disabled", false);
+				i.hide();
+				
+			});
+			return !1;
+        })
+    }), e(themeElements.submitButton).not(".disabled").click(function() {
+        var t = e(e(this).attr("href"));
+        if (!t.length || !t.is("form"))
+            for (t = e(this).parent(); !t.is("form");) t = t.parent();
+        return t.submit(), !1
+    }), e("input").keypress(function(t) {
+        var n = e(this).parent();
+        if (13 == t.which) {
+            for (t.preventDefault(); !n.is("form");) n = n.parent();
+            n.submit()
+        }
+    }), e(themeElements.printButton).click(function() {
+        return window.print(), !1
+    }), e(themeElements.facebookButton).click(function() {
+        var t = e(this).attr("href");
+        return "undefined" != typeof FB && FB.login(function(e) {
+            e.authResponse && (window.location.href = t)
+        }, {
+            scope: "email"
+        }), !1
+    }), e(themeElements.userImageUploader).find('input[type="file"]').change(function() {
+        for (var t = e(this).parent(); !t.is("form");) t = t.parent();
+        t.submit()
+    }), e(themeElements.googleMap).each(function() {
+        var t = e(this),
+            n = new google.maps.LatLng(t.find(".map-latitude").val(), t.find(".map-longitude").val()),
+            i = {
+                zoom: parseInt(t.find(".map-zoom").val()),
+                center: n,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            },
+            a = new google.maps.Map(document.getElementById("google-map"), i),
+            o = new google.maps.Marker({
+                position: n,
+                map: a,
+                title: t.find(".map-description").val()
+            }),
+            s = new google.maps.InfoWindow({
+                content: t.find(".map-description").val()
+            });
+        google.maps.event.addListener(o, "click", function() {
+            s.open(a, o)
+        })
+    }), e("body").bind("updated_checkout", function() {
+        var t = e(themeElements.woocommerceTotal).find(".amount");
+        t.length && e(themeElements.woocommercePrice).find(".amount").each(function() {
+            e(this).parent().is("del") || e(this).text(t.text())
+        })
+    }), e(window).bind("load resize", function() {}), e.browser.msie && e("body").addClass("ie"), e("p:empty").remove(), e("h1,h2,h3,h4,h5,h6,blockquote").prev("br").remove(), e(themeElements.widgetTitle).each(function() {
+        "" == e(this).text() && e(this).remove()
+    })
+});
