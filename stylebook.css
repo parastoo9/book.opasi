@@ -43,9 +43,9 @@ p{
 }
 #sidebar3{
     background-color: lightgreen;
-    width: 34%
+    width: 34%;
     min-height:400px;
-    float:right
+    float:right;
     margin:5px;
 }
 
@@ -71,37 +71,63 @@ img{
     margin: 10px;
     box-shadow: 00 2px gray;
     border-radius: 5px;
-    hover
 }
 .container{
     width: 90%;
     border: 2px solid #000;
     min-height: 300;
     margin: 0 auto;
-    margin-top: 3px;
+    margin-top: 30px;
 
 }
 .gallery-container{
-    padding: 5px;
+    padding: 15px 5px;
+    overflow: auto;
 
 }
 .gallery-container li{
     list-style: none;
     display: inline-block;
-    width: 20%;
+    width: 16%;
     float: right;
-
-
-
+    text-align: center;
+    border:1px solid #efefef;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
     cursor: pointer;
 }
+.gallery-container.product:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,0.15)
+}
 .gallery-container li img{
+    clear: both;
     
 }
+.gallery-container.product-title{
+    font: 9pt tahoma;
+    display: block;
+
+}
+.gallery-container.product.price{
+    font: 10pt tahoma;
+    color:red;
+
+}
 .gallery-container.add-to-cart{
+    font: 9pt tahoma;
+    margin-top: 20px;
+    display:inline-block;
+    border:1px solid (rgb(77, 180, 77);
+    padding:5px 15px;
+    padding-bottom: 8px;
+    width: auto;
+    border-radius: 5px;
+    background-color: green;
+    color: #fff;
 
 }
 .gallery-container.add-to-cart:hover{
     background-color: darkgreen;
-    
+
 }
