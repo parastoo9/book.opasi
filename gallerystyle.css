@@ -7,6 +7,7 @@ body{
    background-color:#efefef;
    direction: rtl;
    font: 9pt tahoma;
+   text-align: center;
 }
 a{
     text-decoration: none;
@@ -114,4 +115,36 @@ a:hover{
     background: #efefef;
     color: green;
 
+}
+.wrapper{
+    width: 1170px;
+    border: 1px solid gray;
+    margin: 30px auto;
+    min-height: 250px;
+
+}
+#menubar{
+    width: 100%;
+    background-color: rgb(7, 7, 7);
+    display: inline-block;
+}
+
+#menubar >ul>li{
+    display: inline-block;
+    float: right;
+    padding: 8px;
+    
+
+}
+#menubar >ul>li>a{
+    color: floralwhite;
+    padding: 8px;
+    display: block;
+}
+#menubar >ul>li>a:hover{
+    background-color: #efefef;
+    color: #000;
+}
+#menubar >ul>li:last-child{
+    float: left;
 }
