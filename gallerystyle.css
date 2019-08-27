@@ -13,6 +13,9 @@ a{
     text-decoration: none;
     color: rgb(187, 33, 28);
 }
+li{
+    list-style: none;
+}
 a:hover{
     color: rgb(14, 21, 121);
 }
@@ -62,23 +65,26 @@ a:hover{
     cursor: pointer;
 }
 #gallery-container .product .image-container{
-    display: block;
     overflow: hidden;
-    position: relative;
+    display: block;
     width: 100%;
     height: 250px;
+    position: relative;
+
 }
-#gallery-container .product .image-container .main-image,#gallery-container .product .image-container .main-image{
-    position: absolute;
+#gallery-container .product .image-container .main-image,#gallery-container .product .image-container .side-image{
     left:0;
     right: 0;
     z-index: 1;
     opacity: 1;
+    position: absolute;
+   
 }
 #gallery-container .product .image-container .side-image{
     z-index: 0;
     opacity: 0;
 }
+
 #gallery-container .product img{
     width: 100%;
     max-height: 300px;
@@ -125,8 +131,11 @@ a:hover{
 }
 #menubar{
     width: 100%;
-    background-color: rgb(7, 7, 7);
+    background-color: #000;
     display: inline-block;
+    min-height: 45px;
+    position: relative;
+
 }
 
 #menubar >ul>li{
@@ -148,3 +157,38 @@ a:hover{
 #menubar >ul>li:last-child{
     float: left;
 }
+#menubar >ul>li>ul{
+    color: floralwhite;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 1170px;
+    right: 0px ;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 8px;
+    background-color: #fff;
+}
+#menubar >ul>li>ul>li{
+    display: block;
+}
+#menubar >ul>li>ul>li>a{
+    display: block;
+    text-align: right;
+    padding: 8px;
+    color: #666;
+    padding-right: 5px;
+}
+#menubar >ul>li>ul>li>a:hover{
+    background-color: #000;
+    color:#fff
+}
+#menubar >ul>li:hover >ul{
+    display: block;
+}
+
+
+
+    
+
+
+    
