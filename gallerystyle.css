@@ -167,9 +167,13 @@ a:hover{
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     padding: 8px;
     background-color: #fff;
+    z-index: 100;
 }
 #menubar >ul>li>ul>li{
     display: block;
+    width: 20%;
+    float: right;
+    height: 200px;
 }
 #menubar >ul>li>ul>li>a{
     display: block;
@@ -185,8 +189,54 @@ a:hover{
 #menubar >ul>li:hover >ul{
     display: block;
 }
+.sidebar-menu{
+    text-align: justify;
+    background-color: darkgray;
 
+}
+.sidebar-menu> li{
+    display: block;
+    position: relative;
+}
+.sidebar-menu >li >a{
+    padding: 8px;
+    padding-right: 15px;
+    color: #444;
+    display: block;
+}
+.sidebar-menu >li>a:hover{
+    background-color: #000;
+    color: #efefef;
+}
+.sidebar-menu>li:hover>ul{
+    display: block;
+}
+.sidebar-menu >li>ul{
+    width: 250px;
+    display: none;
+    position: absolute;
+    top:0px;
+    right: 100px;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 5px rgbs(0,0,0,0.2);
+    z-index: 100;
 
+}
+.sidebar-menu>li>ul>li{
+    display: block;
+
+}
+.sidebar-menu>li>ul>li>a{
+    padding: 8px;
+    padding-right: 15px;
+    color: #444;
+    display: block;
+}    
+.sidebar-menu>li>ul>li>a:hover{
+    background-color: #000;
+    color: #efefef;
+}
 
     
 
